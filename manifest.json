@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "SmartBuy Discount Price",
+  "version": "1.0.0",
+  "description": "Shows the price after your expected discount next to every flight price on offers.reward360.in.",
+  "permissions": ["storage"],
+  "content_scripts": [
+    {
+      "matches": ["https://offers.reward360.in/*"],
+      "js": ["content.js"],
+      "css": ["content.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": { "default_popup": "popup.html", "default_title": "Discount %" }
+}
